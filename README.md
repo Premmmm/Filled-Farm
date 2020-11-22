@@ -36,7 +36,7 @@ knowledge and time we have, everything for a better future.
 2) Spyder
 3) Anaconda
 4) Sublime Text Editor 
-\\\
+
 **IMPORTANT FOLDERS** \
 WEB and ML model in folder :point_right: https://github.com/Filled-Farm/Filled-Farm-42/tree/master/Web_app_filled_farm
 
