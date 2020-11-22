@@ -26,7 +26,6 @@ knowledge and time we have, everything for a better future.
 2) CSS 
 3) JS 
 4) Flask
-5) Firebase Database 
 
 
 ### Machine Learning
