@@ -39,7 +39,7 @@ knowledge and time we have, everything for a better future.
 
 
 
-## Mobile App UI
+## UI and UX
 
 <div>
   <img src="https://github.com/Filled-Farm/Filled-Farm-42/blob/master/assets/screenshots/farmerprofile1.jpg" align="left" height="535" width="270" />
