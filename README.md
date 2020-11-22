@@ -41,13 +41,15 @@ knowledge and time we have, everything for a better future.
 WEB and ML model in folder :point_right: https://github.com/Filled-Farm/Filled-Farm-42/tree/master/Web_app_filled_farm
 
 ## UI and UX MOBILE
+<div>
+hola
+hele
+dala
+</div>
 
 <div>
-  Hola
   <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/farmerprofile1.jpg"  height="535" width="270" />
-  hala
   <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/farmerprofile2.jpg"  height="535" width="270" />
-  dala
   <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/vendorprofile.jpg"  height="535" width="270" />
   <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/drawer.jpg"  height="535" width="270" />  
   <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/editprofile.jpg" height="535" width="270" />
