@@ -124,9 +124,11 @@ class _ForSaleDetailsContainer extends StatelessWidget {
                   Text(
                     item.tag,
                     style: _constants.style.copyWith(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 1.3),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1.3,
+                      color: Colors.green,
+                    ),
                   ),
                   Spacer(),
                   Text(

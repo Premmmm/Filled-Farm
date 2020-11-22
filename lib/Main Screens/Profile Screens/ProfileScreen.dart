@@ -132,6 +132,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
       }
     });
 
+    // GETTING ORGANIZATION
+
+    if (provider.occupation == 'Vendor') {
+      await _firestoredb
+          .collection(provider.user.email)
+          .doc('organization')
+          .get()
+          .then((DocumentSnapshot snapshot) {
+        if (snapshot.data() != null) {
+          Map<dynamic, dynamic> values = snapshot.data();
+          values.forEach((key, value) {
+            if (key.toString() == 'organization') {
+              provider.setOrganization(value.toString());
+            }
+          });
+        }
+      });
+    }
+
     // GETTING RATING
 
     await _firestoredb
@@ -162,10 +181,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     List<String> _ownerName = [];
     List<String> _quantity = [];
-    List<String> _ownerEmail = [];
-    List<String> _vendorEmail = [];
+    // List<String> _ownerEmail = [];
+    // List<String> _vendorEmail = [];
     List<String> _vendorName = [];
-    List<String> _ownerRating = [];
+    // List<String> _ownerRating = [];
     List<String> _organization = [];
     List<String> _costPer50Kg = [];
     List<String> _tag = [];
@@ -236,15 +255,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
     for (int i = 0; i < _ownerName.length; i++) {
       _solItem.add(
         SoldItems(
-          ownerName: _ownerName[i],
-          vendorName: _vendorName[i],
-          organization: _organization[i],
-          quantity: _quantity[i],
-          costPer50Kg: _costPer50Kg[i],
-          tag: _tag[i],
-          city: _city[i],
-          rating: _rating[i]
-        ),
+            ownerName: _ownerName[i],
+            vendorName: _vendorName[i],
+            organization: _organization[i],
+            quantity: _quantity[i],
+            costPer50Kg: _costPer50Kg[i],
+            tag: _tag[i],
+            city: _city[i],
+            rating: _rating[i]),
       );
     }
     provider.setSoldItems(_solItem);
@@ -502,7 +520,6 @@ class _DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    var provider = Provider.of<Data>(context);
     Constants _constants = Constants();
     return Drawer(
       child: SingleChildScrollView(

@@ -48,6 +48,7 @@ class _SoldDetailsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<Data>(context);
     return Padding(
       padding: const EdgeInsets.only(right: 20.0),
       child: Material(
@@ -70,13 +71,14 @@ class _SoldDetailsContainer extends StatelessWidget {
                     style: _constants.style.copyWith(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
-                        letterSpacing: 1.3),
+                        letterSpacing: 1.3,
+                        color: Colors.redAccent),
                   ),
                   Spacer(),
                   Text(
-                    'FOR SALE',
+                    'SOLD',
                     style: _constants.style.copyWith(
-                      color: Colors.green,
+                      color: Colors.redAccent,
                       fontSize: 13,
                       fontWeight: FontWeight.w600,
                     ),
@@ -84,16 +86,47 @@ class _SoldDetailsContainer extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 10),
-              Text('Quantity:  ${item.quantity}', style: _constants.style),
-              SizedBox(height: 5),
-              Text(
-                'Cost:  ₹ ${item.costPer50Kg} per kg.',
-                style: _constants.style,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'City:  ${item.city}',
-                style: _constants.style,
+              Row(
+                mainAxisAlignment: provider.occupation == 'Farmer'
+                    ? MainAxisAlignment.start
+                    : MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Quantity:  ${item.quantity}',
+                          style: _constants.style),
+                      SizedBox(height: 5),
+                      if (provider.occupation != 'Farmer')
+                        Text(
+                          'Farmer: ${item.ownerName}',
+                          style: _constants.style,
+                        ),
+                      if (provider.occupation == 'Farmer')
+                        Text(
+                          item.organization == null
+                              ? 'Organization: Org'
+                              : 'Organization: ${item.organization}',
+                          style: _constants.style,
+                        ),
+                      SizedBox(height: 5),
+                      Text('City: ${item.city}', style: _constants.style),
+                    ],
+                  ),
+                  if (provider.occupation != 'Farmer')
+                    Row(
+                      children: [
+                        Text(
+                          '${item.rating}',
+                          style: _constants.style.copyWith(fontSize: 16),
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.yellow[900],
+                        )
+                      ],
+                    )
+                ],
               ),
             ],
           ),

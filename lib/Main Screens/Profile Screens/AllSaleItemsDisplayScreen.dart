@@ -33,7 +33,7 @@ class AllSaleItemsDisplayScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.only(top: 30),
-            height: MediaQuery.of(context).size.height*1.4,
+            height: MediaQuery.of(context).size.height * 1.4,
             width: MediaQuery.of(context).size.width,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -80,10 +80,11 @@ class _ForSaleDetailsContainer extends StatelessWidget {
                   Text(
                     item.tag,
                     style: _constants.style.copyWith(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 1.3,
-                        color: Colors.green),
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1.3,
+                      color: Colors.green,
+                    ),
                   ),
                   Spacer(),
                   Text(
@@ -98,8 +99,8 @@ class _ForSaleDetailsContainer extends StatelessWidget {
               ),
               Text(
                 'PRODUCT DETAILS',
-                style: _constants.style
-                    .copyWith(fontWeight: FontWeight.bold, color: Colors.blueAccent),
+                style: _constants.style.copyWith(
+                    fontWeight: FontWeight.bold, color: Colors.blueAccent),
               ),
               SizedBox(height: 10),
               Text('Quantity: ${item.quantity}', style: _constants.style),

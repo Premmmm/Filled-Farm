@@ -19,11 +19,25 @@ class Data extends ChangeNotifier {
   String currentCity;
   String reviewers;
   String organization;
+  String predictedPrice;
   bool loggedAndLoaded = false;
 
   List<String> tags = [];
   List<ForSaleItem> forSaleItems = [];
   List<SoldItems> soldItems = [];
+
+  void getPredictedPrice() {
+    List _k = Constants().mlModel;
+    print(_k);
+    for (var i in _k) {
+      if (i["Name"] == selectedTag) {
+        predictedPrice = i["Predicted Price"].toString();
+        print(predictedPrice);
+        notifyListeners();
+        break;
+      }
+    }
+  }
 
   void setSoldItems(List<SoldItems> _si) {
     soldItems = _si;

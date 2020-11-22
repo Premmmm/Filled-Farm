@@ -593,6 +593,8 @@ class AlertBoxWidget {
                           print(_);
                           Provider.of<Data>(context, listen: false)
                               .setSelectedTag(_);
+                          Provider.of<Data>(context, listen: false)
+                              .getPredictedPrice();
                         },
                       ),
                     ),
@@ -646,7 +648,8 @@ class AlertBoxWidget {
                     keyboardType: TextInputType.number,
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
-                      labelText: 'Amount per 50 Kg.',
+                      labelText: Provider.of<Data>(context).predictedPrice ==null ?
+                          'Suggested Price ': 'Suggested Price: ₹ ${Provider.of<Data>(context).predictedPrice}',
                       contentPadding: EdgeInsets.only(left: 15),
                       labelStyle:
                           _constants.style.copyWith(color: Colors.black),

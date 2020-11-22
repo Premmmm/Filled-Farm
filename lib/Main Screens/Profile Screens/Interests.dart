@@ -11,7 +11,6 @@ FirebaseFirestore _firestoredb = FirebaseFirestore.instance;
 class InterestsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var provider = Provider.of<Data>(context);
     return Scaffold(
       backgroundColor: _constants.backgroundColorAllScreens,
       appBar: AppBar(
@@ -23,7 +22,7 @@ class InterestsScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
-            height: MediaQuery.of(context).size.height,
+            height: MediaQuery.of(context).size.height*2,
             width: MediaQuery.of(context).size.width,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
