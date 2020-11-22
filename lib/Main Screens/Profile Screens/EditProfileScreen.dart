@@ -39,14 +39,18 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   elevation: 50,
                   color: Colors.transparent,
                   child: Container(
-                    height: ((screenSize.height * 0.09) *
-                            (provider.tags.length / 2)) +
-                        provider.tags.length / 3,
+                    height: provider.tags.length <= 3
+                        ? 150
+                        : ((screenSize.height * 0.09) *
+                                (provider.tags.length / 2)) +
+                            provider.tags.length / 3,
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(
-                        color: Colors.grey[900],
-                        borderRadius: BorderRadius.circular(20)),
+                      color: Colors.grey[900],
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           children: [
