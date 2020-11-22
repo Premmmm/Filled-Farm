@@ -39,10 +39,6 @@ knowledge and time we have, everything for a better future.
 
 
 
-### ML Model Repo:
-https://github.com/keshav3010/Filled_farm 
-
-
 ## Mobile App UI
 
 <div>
