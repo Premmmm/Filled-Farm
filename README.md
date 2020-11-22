@@ -56,10 +56,10 @@ WEB and ML model in folder :point_right: https://github.com/Filled-Farm/Filled-F
 
 ##  UI and UX WEB
 <div>
-  <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/page_1.png"  height="300" width="700" />
-  <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/page_2.png"  height="300" width="700" />
-  <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/page_3.png" height="300" width="700" />
-  <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/page_4.png" height="300" width="700" />
+  <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/page_1.png"  height="300" width="700" /><br>
+  <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/page_2.png"  height="300" width="700" /><br>
+  <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/page_3.png" height="300" width="700" /><br>
+  <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/page_4.png" height="300" width="700" /><br>
   <img src="https://github.com/Premmmm/Filled-Farm/blob/master/assets/screenshots/page_5.png" height="300" width="700" />
 </div><br><br>
 
