@@ -4,7 +4,7 @@
 ## About
 We Team 42 bring you our product/application Filled Farm.
 Filled farm is a mobile/web application which acts as an interface between farmers and vendors directly without the need for middlemen. It comes wIth a stunning UI, easy
-access yet efficient features and a seamless user experience. 
+access yet efficient features and a seamless user experience. Our theme is Agriculture - Open Innovation.
 
 ## Team 42
 Team 42 have been active for around a year, been developing various projects, but the common this is we want to make a social change, we want to make a revolution with the 
